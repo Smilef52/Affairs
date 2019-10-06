@@ -14,10 +14,12 @@
           <div class="circle-small"></div>
         </div>
       </div>
-      <div id="message" class="column-item column-items">
-        <img src="images/common/消息(点击前).png" alt class="column-logo" />
-        <p class="column-text">消息</p>
-      </div>
+      <router-link to="/message">
+        <div id="message" class="column-item column-items">
+          <img src="images/common/消息(点击前).png" alt class="column-logo" />
+          <p class="column-text">消息</p>
+        </div>
+      </router-link>
       <router-link to="/user">
         <div id="personage" class="column-item column-items">
           <img src="images/common/我(点击前).png" alt class="column-logo" />
@@ -41,7 +43,7 @@ export default {
   justify-content: space-around;
   width: 3.75rem;
   height: 0.65rem;
-  background: rgba(99, 99, 177, 0.6);
+  /* background: rgba(99, 99, 177, 0.6); */
   position: fixed;
   bottom: 0;
 }
@@ -52,7 +54,7 @@ export default {
   align-items: center;
   width: 0.45rem;
   height: 100%;
-  background: rgba(11, 121, 218, 0.6);
+  /* background: rgba(11, 121, 218, 0.6); */
 }
 .column-logo {
   width: 0.266rem;
