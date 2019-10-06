@@ -1,7 +1,11 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
-import User from '@/pages/user/home/Home'
+import UserHome from '@/pages/user/home/Home'
+import UserMyAffairs from '@/pages/user/myAffairs/myAffairs'
+import UserMyGroup from '@/pages/user/myGroup/myGroup'
+import UserMyDrafts from '@/pages/user/myDrafts/myDrafts'
+import UserMyHistory from '@/pages/user/myHistory/myHistory'
 
 Vue.use(Router)
 
@@ -13,8 +17,24 @@ export default new Router({
       component: Home
     }, {
       path: '/user',
-      name: 'User',
-      component: User
+      name: 'UserHome',
+      component: UserHome
+    }, {
+      path: '/user/myAffairs',
+      name: 'UserMyAffairs',
+      component: UserMyAffairs
+    }, {
+      path: '/user/myGroup',
+      name: 'UserMyGroup',
+      component: UserMyGroup
+    }, {
+      path: '/user/myDrafts',
+      name: 'UserMyDrafts',
+      component: UserMyDrafts
+    }, {
+      path: '/user/myHistory',
+      name: 'UserMyHistory',
+      component: UserMyHistory
     }
   ]
 })

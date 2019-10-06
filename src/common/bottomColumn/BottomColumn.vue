@@ -2,11 +2,11 @@
   <div>
     <div id="bottom-column">
       <div id="home" class="column-item column-items">
-        <img src="images/common/主页(点击前).png" alt class="column-logo" />
+        <img src="~images/common/主页(点击前).png" alt class="column-logo" />
         <p class="column-text">主页</p>
       </div>
       <div id="interact" class="column-item column-items">
-        <img src="images/common/互动(点击前).png" alt class="column-logo" />
+        <img src="~images/common/互动(点击前).png" alt class="column-logo" />
         <p class="column-text">互动</p>
       </div>
       <div id="new-card" class="column-circle-item column-items">
@@ -15,12 +15,12 @@
         </div>
       </div>
       <div id="message" class="column-item column-items">
-        <img src="images/common/消息(点击前).png" alt class="column-logo" />
+        <img src="~images/common/消息(点击前).png" alt class="column-logo" />
         <p class="column-text">消息</p>
       </div>
       <router-link to="/user">
         <div id="personage" class="column-item column-items">
-          <img src="images/common/我(点击前).png" alt class="column-logo" />
+          <img src="~images/common/我(点击前).png" alt class="column-logo" />
           <p class="column-text">我</p>
         </div>
       </router-link>
@@ -41,7 +41,7 @@ export default {
   justify-content: space-around;
   width: 3.75rem;
   height: 0.65rem;
-  background: rgba(99, 99, 177, 0.6);
+  background: #FFFFFF;
   position: fixed;
   bottom: 0;
 }
@@ -52,7 +52,6 @@ export default {
   align-items: center;
   width: 0.45rem;
   height: 100%;
-  background: rgba(11, 121, 218, 0.6);
 }
 .column-logo {
   width: 0.266rem;
