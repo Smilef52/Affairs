@@ -1,14 +1,12 @@
 <template>
-    <div>
-        header
-    </div>
+  <div>Affairs</div>
 </template>
+
 <script>
 export default {
-    name:"UserHeader"
-}
+  name: "UserAffairs"
+};
 </script>
 
 <style scoped>
-
 </style>
