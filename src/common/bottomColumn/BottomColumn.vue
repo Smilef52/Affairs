@@ -16,7 +16,7 @@
       </div>
       <router-link to="/message">
         <div id="message" class="column-item column-items">
-          <img src="images/common/消息(点击前).png" alt class="column-logo" />
+          <img src="~images/common/消息(点击前).png" alt class="column-logo" />
           <p class="column-text">消息</p>
         </div>
       </router-link>
