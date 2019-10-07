@@ -10,6 +10,16 @@ import './rem.js'
 import App from './App'
 import router from './router'
 
+// //引入轮播图组件
+// import VueAwesomeSwiper from 'vue-awesome-swiper'
+// import 'swiper/dist/css/swiper.css'
+// Vue.use(VueAwesomeSwiper)
+
+// 引入vuex
+// import Vuex from 'vuex'
+// import store from './store'
+// Vue.use(Vuex)
+
 
 Vue.config.productionTip = false
 
@@ -17,6 +27,7 @@ Vue.config.productionTip = false
 new Vue({
   el: '#app',
   router,
+  // store,
   components: { App },
   template: '<App/>'
 })
