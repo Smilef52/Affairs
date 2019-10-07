@@ -5,7 +5,7 @@
 </template>
 
 <script>
-import btmColumn from './pages/btmColumn'
+import btmColumn from './common/btmColumn'
 export default {
   name: 'App' ,
   components: {
