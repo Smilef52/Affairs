@@ -1,16 +1,12 @@
 <template>
   <div id="app">
-    <btm-column></btm-column>
+    <router-view/>
   </div>
 </template>
 
 <script>
-import btmColumn from './common/btmColumn'
 export default {
-  name: 'App' ,
-  components: {
-    btmColumn
-  }
+  name: 'App'
 }
 </script>
 
