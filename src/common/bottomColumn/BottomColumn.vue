@@ -1,10 +1,12 @@
 <template>
   <div>
     <div id="bottom-column">
-      <div id="home" class="column-item column-items">
-        <img src="~images/common/主页(点击前).png" alt class="column-logo" />
-        <p class="column-text">主页</p>
-      </div>
+      <router-link to="/">
+        <div id="home" class="column-item column-items">
+          <img src="~images/common/主页(点击前).png" alt class="column-logo" />
+          <p class="column-text">主页</p>
+        </div>
+      </router-link>
       <div id="interact" class="column-item column-items">
         <img src="~images/common/互动(点击前).png" alt class="column-logo" />
         <p class="column-text">互动</p>
@@ -46,6 +48,7 @@ export default {
   background: #FFFFFF;
   position: fixed;
   bottom: 0;
+  z-index:1
 }
 .column-items {
   display: flex;
