@@ -5,6 +5,7 @@ import Message from '@/pages/message/Message'
 import UserHome from '@/pages/user/home/Home'
 import UserMyAffairs from '@/pages/user/myAffairs/myAffairs'
 import UserMyGroup from '@/pages/user/myGroup/myGroup'
+import UserMyGroupDetail from '@/pages/user/myGroupDetail/myGroupDetail'
 import UserMyDrafts from '@/pages/user/myDrafts/myDrafts'
 import UserMyHistory from '@/pages/user/myHistory/myHistory'
 
@@ -28,6 +29,10 @@ export default new Router({
       path: '/user/myGroup',
       name: 'UserMyGroup',
       component: UserMyGroup
+    }, {
+      path: '/user/myGroup/detail',
+      name: 'UserMyGroupDetail',
+      component: UserMyGroupDetail
     }, {
       path: '/user/myDrafts',
       name: 'UserMyDrafts',
