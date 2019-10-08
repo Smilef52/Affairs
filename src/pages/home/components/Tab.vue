@@ -48,18 +48,22 @@ export default {
     font-size: .16rem
     display: flex
     justify-content: center
-    height: .48rem
-    background:#2b3535
-    background: linear-gradient(-45deg,transparent 10px,#2b3535 0) right,
-                linear-gradient(45deg,transparent 10px,#2b3535 0) left;
-    background-size: 51% 100%;
-    background-repeat: no-repeat;
+    height: .67rem
+    position:fixed
+    z-index:2
+    width:100%
+    // background:#2b3535
+    // background: linear-gradient(-45deg,transparent 10px,#2b3535 0) right,
+    //             linear-gradient(45deg,transparent 10px,#2b3535 0) left;
+    // background-size: 51% 100%;
+    // background-repeat: no-repeat;
+    background:linear-gradient(to right, #040309, #7B7B7B)
     .item
       margin-right: .40rem
       margin-left: .20rem
-      line-height: .48rem
-      color: white
+      line-height: .67rem
+      color: #fff
     .active
-      color: #34978d
+      color: #fffbc4
       text-decoration: underline
 </style>

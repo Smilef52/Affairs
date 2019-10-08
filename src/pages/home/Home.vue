@@ -1,6 +1,6 @@
 <template>
     <div>
-        <home-header></home-header>
+        <!-- <home-header></home-header> -->
         <home-tab @changeTab = "clickIndex" 
                   :swiperSendIndex="swiperToNav"
         >
