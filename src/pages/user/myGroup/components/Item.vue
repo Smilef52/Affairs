@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div class="group-item" v-for="item in GroupList" :key="item.id">
+    <router-link tag="div" to="/user/myGroup/detail" class="group-item" v-for="item in GroupList" :key="item.id">
       <div class="group-item-left">
         <div class="group-item-name">{{item.name}}</div>
         <div class="group-item-information">
@@ -15,7 +15,7 @@
       <div class="group-item-right">
         <div class="group-item-desc">{{item.desc}}</div>
       </div>
-    </div>
+    </router-link>
     <div class="group-function-box">
       <div class="group-function-append" @click="handleAppendClick">
         <img src="~images/user/append.png" alt="append" />
@@ -46,8 +46,8 @@ export default {
   methods: {
     handleAppendClick() {
       this.$emit("appendItem");
-    },handleSearchClick(){
-      
+    },
+    handleSearchClick() {
       this.$emit("searchItem");
     }
   }
