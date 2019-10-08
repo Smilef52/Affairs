@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
 import Home from '@/pages/home/Home'
+import Message from '@/pages/message/Message'
 import UserHome from '@/pages/user/home/Home'
 import UserMyAffairs from '@/pages/user/myAffairs/myAffairs'
 import UserMyGroup from '@/pages/user/myGroup/myGroup'

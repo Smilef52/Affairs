@@ -2,7 +2,7 @@
     <div>
         <ul>
             <li>
-                <div class="side"></div>
+                <img class="side" src="~images/message/sidebar.png"/>
                 <div class="right">
                     <div class="time">下午17：34</div>
                     <div class="content">
@@ -40,10 +40,10 @@ ul{
     margin-right: auto;
     position: relative;
 }
-.side{
+/* .side{
     background-image: url("~images/message/sidebar.png");
     background-size: 100% 100%;
-}
+} */
 .time{
     font-size: 0.15rem;
     color: #ffffff;
