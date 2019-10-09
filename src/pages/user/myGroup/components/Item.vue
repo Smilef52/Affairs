@@ -1,6 +1,12 @@
 <template>
   <div>
-    <router-link tag="div" to="/user/myGroup/detail" class="group-item" v-for="item in GroupList" :key="item.id">
+    <router-link
+      tag="div"
+      to="/user/myGroup/detail"
+      class="group-item"
+      v-for="item in GroupList"
+      :key="item.id"
+    >
       <div class="group-item-left">
         <div class="group-item-name">{{item.name}}</div>
         <div class="group-item-information">
@@ -11,7 +17,7 @@
           </div>
         </div>
       </div>
-      <div class="group-logo"></div>
+      <div class="group-logo" :style="{'background-image':'url('+item.logo+')'}"></div>
       <div class="group-item-right">
         <div class="group-item-desc">{{item.desc}}</div>
       </div>
@@ -38,7 +44,8 @@ export default {
           name: "nw天下无敌",
           tag: "工作小组",
           num: "14",
-          desc: "咕咕咕咕咕咕有爱的一家"
+          desc: "咕咕咕咕咕咕有爱的一家",
+          logo: require("images/user/grouplogo.png")
         }
       ]
     };
@@ -102,7 +109,6 @@ export default {
   display: inline-block;
   background-size: cover;
   background-position: center;
-  background-image: url("~images/user/grouplogo.png");
 }
 .group-item-right {
   height: 100%;
