@@ -3,9 +3,11 @@
     <div class="bgImg"></div>
     <group-header></group-header>
     <div class="container">
-      <group-item></group-item>
+      <group-item @appendItem="handleAppendShow" @searchItem="handleSearchShow"></group-item>
     </div>
     <bottom-column></bottom-column>
+    <group-append v-show="showAppendCard" @cancel="handleCancel" @creat="handleCreat"></group-append>
+    <group-search v-show="showSearchCard" @close="handleClose" @search="handleSearch"></group-search>
   </div>
 </template>
 
@@ -13,12 +15,42 @@
 import GroupHeader from "@/pages/user/myGroup/components/Header";
 import GroupItem from "@/pages/user/myGroup/components/Item";
 import BottomColumn from "@/common/bottomColumn/BottomColumn";
+import GroupAppend from "@/pages/user/myGroup/components/Append";
+import GroupSearch from "@/pages/user/myGroup/components/Search";
 export default {
   name: "UserGroup",
   components: {
     GroupHeader,
     GroupItem,
-    BottomColumn
+    BottomColumn,
+    GroupAppend,
+    GroupSearch
+  },
+  data() {
+    return {
+      showAppendCard: false,
+      showSearchCard: false
+    };
+  },
+  methods: {
+    handleAppendShow() {
+      this.showAppendCard = true;
+    },
+    handleCancel() {
+      this.showAppendCard = false;
+    },
+    handleCreat() {
+      this.showAppendCard = false;
+    },
+    handleSearchShow() {
+      this.showSearchCard = true;
+    },
+    handleClose() {
+      this.showSearchCard = false;
+    },
+    handleSearch() {
+      this.showSearchCard = false;
+    }
   }
 };
 </script>
@@ -38,6 +70,8 @@ export default {
   position: fixed;
   top: 0.67rem;
   height: 100vh;
+  box-sizing: border-box;
+  padding-top: 0.28rem;
   width: 100%;
   overflow: auto;
 }

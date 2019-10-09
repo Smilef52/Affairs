@@ -1,12 +1,13 @@
 <template>
   <div>
-    <div class="group-item" v-for="item in GroupList" :key="item.id">
+    <router-link tag="div" to="/user/myGroup/detail" class="group-item" v-for="item in GroupList" :key="item.id">
       <div class="group-item-left">
         <div class="group-item-name">{{item.name}}</div>
         <div class="group-item-information">
           <div class="group-item-tag">{{item.tag}}</div>
           <div class="group-item-num">
-            <span>成员人数：</span>{{item.num}}
+            <span>成员人数：</span>
+            {{item.num}}
           </div>
         </div>
       </div>
@@ -14,12 +15,12 @@
       <div class="group-item-right">
         <div class="group-item-desc">{{item.desc}}</div>
       </div>
-    </div>
+    </router-link>
     <div class="group-function-box">
-      <div class="group-function-append">
+      <div class="group-function-append" @click="handleAppendClick">
         <img src="~images/user/append.png" alt="append" />
       </div>
-      <div class="group-function-search">
+      <div class="group-function-search" @click="handleSearchClick">
         <img src="~images/user/search.png" alt="search" />
       </div>
     </div>
@@ -31,15 +32,25 @@ export default {
   name: "GroupItem",
   data() {
     return {
-      GroupList:[{
-        id:"1",
-        name:"nw天下无敌",
-        tag:"工作小组",
-        num:"14",
-        desc:"咕咕咕咕咕咕有爱的一家"
-      }]
-    }
+      GroupList: [
+        {
+          id: "1",
+          name: "nw天下无敌",
+          tag: "工作小组",
+          num: "14",
+          desc: "咕咕咕咕咕咕有爱的一家"
+        }
+      ]
+    };
   },
+  methods: {
+    handleAppendClick() {
+      this.$emit("appendItem");
+    },
+    handleSearchClick() {
+      this.$emit("searchItem");
+    }
+  }
 };
 </script>
 
@@ -49,9 +60,9 @@ export default {
   width: 3.18rem;
   box-sizing: border-box;
   border-radius: 0.08rem;
-  margin: 0.09rem auto;
+  margin: 0 auto 0.2rem;
   padding: 0.15rem 0.34rem 0.15rem 0.17rem;
-  background-color: #ffffff;
+  background-color: rgba(255, 255, 255, 0.9);
   display: flex;
   justify-content: space-between;
   align-items: center;
