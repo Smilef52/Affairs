@@ -7,10 +7,12 @@
           <p class="column-text">主页</p>
         </div>
       </router-link>
-      <div id="interact" class="column-item column-items">
-        <img src="~images/common/互动(点击前).png" alt class="column-logo" />
-        <p class="column-text">互动</p>
-      </div>
+      <router-link to="/social">
+        <div id="social" class="column-item column-items">
+          <img src="~images/common/互动(点击前).png" alt class="column-logo" />
+          <p class="column-text">互动</p>
+        </div>
+      </router-link>
       <div id="new-card" class="column-circle-item column-items">
         <div class="circle-big">
           <div class="circle-small"></div>

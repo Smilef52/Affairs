@@ -1,17 +1,18 @@
 <template>
     <div>
         <ul>
-            <li>
-                <img class="side" src="~images/message/sidebar.png"/>
+            <li v-for="(item, index) in note" :key="index">
+                <img class="side" src="~images/social/sidebar.png"/>
                 <div class="right">
-                    <div class="time">下午17：34</div>
+                    <div class="time">{{item.time}}</div>
                     <div class="content">
                         <div class="word">
-                            <div class="username">格子棍</div>
-                            <div class="detail">大爷，下次我请你</div>
+                            <div class="username">{{item.username}}</div>
+                            <div class="detail" v-if="item.detail">{{item.detail}}</div>
+                            <div class="heart" v-if="!item.detail"></div>
                         </div>
-                        <img class="roundImg" src="~images/message/dove.png"/>
-                        <img class="squareImg" src="~images/message/man.png"/>
+                        <img class="roundImg" :src="item.roundImg"/>
+                        <img class="squareImg" :src="item.squareImg"/>
                     </div>
                 </div>
             </li>
@@ -21,10 +22,21 @@
 
 <script>
 export default {
-    name: "MessageList",
+    name: "SocialList",
     data(){
         return {
-
+            note: [{
+                time: '下午17：34',
+                username: '格子琨',
+                detail: '大爷，下次我请你',
+                roundImg: require('images/social/dove.png'),
+                squareImg: require('images/social/man.png')
+            }, {
+                time: '下午17：34',
+                username: '格子琨',
+                roundImg: require('images/social/dove.png'),
+                squareImg: require('images/social/man.png')
+            }, ]
         }
     }
 }
@@ -33,7 +45,7 @@ export default {
 <style scoped>
 ul{
     width: 3.05rem;
-    margin-top: 0.4rem;
+    top: 1.07rem;
     right: 0;
     left: 0;
     margin-left: auto;
@@ -41,7 +53,7 @@ ul{
     position: relative;
 }
 /* .side{
-    background-image: url("~images/message/sidebar.png");
+    background-image: url("~images/social/sidebar.png");
     background-size: 100% 100%;
 } */
 .time{
@@ -80,6 +92,12 @@ ul{
 }
 .detail{
     font-size: 0.09rem;
+}
+.heart{
+    width: 0.1665rem;
+    height: 0.15rem;
+    background-image: url("~images/social/heart.png");
+    background-size: 100% 100%;
 }
 .roundImg{
     width: 0.45rem;
