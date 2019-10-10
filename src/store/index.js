@@ -1,10 +1,7 @@
 import Vue from 'vue'
 import Vuex from 'vuex'
 import VuexPersist from 'vuex-persist'
-import state from './state'
-import mutations from './mutations'
 Vue.use(Vuex)
-
 const vuexSession = new VuexPersist({
   storage: window.sessionStorage
 })
@@ -13,21 +10,20 @@ const state = {
   navInde: 0,
   swpierIndex: 0
 }
-
 const getters = {}
-
 const mutations = {
-  saveNavIndex: function(state,resolv){
-    state.navIndex = resolv
+  saveNavIndex: function (state, roslov) {
+  	// console.log('1111', roslov)
+    state.navInde = roslov
   },
-  saveSwiperIndex: function (state,res) {
-    state.swiperIndex = res
+  saveSwiperIndex: function (state, res) {
+  	// console.log('2222222', res)
+    state.swpierIndex = res
   }
 }
-
 export default new Vuex.Store({
   state,
   getters,
   mutations,
-  plugins:[vuexSession.plugin]
+  plugins: [vuexSession.plugin]
 })

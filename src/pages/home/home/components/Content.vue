@@ -16,8 +16,8 @@
 import Get from './Get'
 import Finished from './Finished'
 // 引入轮播图
-import Swiper from '../../../../static/swiper-4.3.3.min.js'
-import '../../../../static/swiper-4.3.3.min.css'
+import Swiper from '../../../../../static/swiper-4.3.3.min.js'
+import '../../../../../static/swiper-4.3.3.min.css'
 export default {
   props:{
     swiperIndex:Number
@@ -38,22 +38,19 @@ export default {
   data(){
     return{
       list:[
-        {path:'/get',component:Get},
+        {path:'/',component:Get},
         {path:'/finished',component:Finished}
       ],
-      mySwiper:null,
-      swiperOption:{
-        loop: false
-      }
+      mySwiper:null
     }
   },
   mounted(){
     this.mySwiper = new Swiper('.swiper-container'
-    // ,{
-    //   // 设置初始slide值
-    //   initialSlide: this.$router.path==='/get' ? 0: this.$router.path ==='finished'?1:0
+    ,{
+      // 设置初始slide值
+      initialSlide: this.$router.path ===  '/' ? 0 : this.$router.path === '/finished' ? 1 : 0
       
-    // }
+    }
     )
     this.mySwiper.on('slideChange',()=>{
       // 把当前滑动到哪个页面传递到父组件
@@ -61,10 +58,6 @@ export default {
       // console.log(this.mySwiper.activeIndex);
       
     })
-    // console.log(this.mySwiper);
-    // console.log(this.initialSlide);
-    
-    
   }
 }
 </script>
