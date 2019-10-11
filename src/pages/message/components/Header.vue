@@ -12,6 +12,10 @@ export default {
 
 <style scoped>
 .message-header{
+    position: fixed;
+    z-index: 99;
+    top: 0;
+    left: 0;
     height: 0.67rem;
     width: 100%;
     background: linear-gradient(to right, #040309, #7B7B7B);

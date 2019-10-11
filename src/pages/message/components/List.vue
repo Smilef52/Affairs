@@ -1,17 +1,21 @@
 <template>
     <div>
         <ul>
-            <li>
-                <div class="side"></div>
-                <div class="right">
-                    <div class="time">下午17：34</div>
+            <li v-for="(item, index) in note" :key="index">
+                <img class="side" src="~images/social/sidebar2.png"/>
+                <div class="left">
+                    <div class="time">{{item.time}}</div>
+                    <div v-if="item.event" class="event">
+                        <img class="somebody" :src="item.event.somebody"/>
+                        <div class="detail">{{item.event.detail}}</div>
+                    </div>
                     <div class="content">
+                        <img class="roundImg" :src="item.roundImg"/>
                         <div class="word">
-                            <div class="username">格子棍</div>
-                            <div class="detail">大爷，下次我请你</div>
+                            <div class="title">标题：{{item.title}}</div>
+                            <div class="tag">标签：{{item.tag}}</div>
+                            <div class="username">jio雯婷</div>
                         </div>
-                        <img class="roundImg" src="~images/message/dove.png"/>
-                        <img class="squareImg" src="~images/message/man.png"/>
                     </div>
                 </div>
             </li>
@@ -24,7 +28,21 @@ export default {
     name: "MessageList",
     data(){
         return {
-
+            note: [{
+                event: {
+                    somebody: require('images/social/dove.png'),
+                    detail: '鸽子琨领取了'
+                },
+                time: '7月16日17：30',
+                title: '有人帮我带奶茶吗',
+                tag: '生活',
+                roundImg: require('images/social/man.png')
+            }, {
+                time: '7月16日17：14',
+                title: '有人帮我带奶茶吗',
+                tag: '生活',
+                roundImg: require('images/social/man.png')
+            }]
         }
     }
 }
@@ -33,29 +51,45 @@ export default {
 <style scoped>
 ul{
     width: 3.05rem;
-    margin-top: 0.4rem;
+    top: 0.4rem;
     right: 0;
     left: 0;
     margin-left: auto;
     margin-right: auto;
     position: relative;
 }
-.side{
-    background-image: url("~images/message/sidebar.png");
-    background-size: 100% 100%;
-}
 .time{
     font-size: 0.15rem;
     color: #ffffff;
     margin-bottom: 0.07rem;
 }
+.event{
+    height: 0.31rem;
+    margin-bottom: 0.1rem;
+    margin-top: 0.1rem;
+    vertical-align: middle;
+}
+.somebody{
+    width: 0.31rem;
+    height: 0.31rem;
+    border-radius: 0.31rem;
+    vertical-align: middle;
+}
+.detail{
+    height: 0.31rem;
+    line-height: 0.31rem;
+    color: white;
+    vertical-align: middle;
+    display: inline-block;
+    font-size: 0.14rem;
+}
 .side{
-    width: 0.19rem;
-    height: 1.545rem;
+    width: 0.2268rem;
+    height: 1.79rem;
     display: inline-block;
     vertical-align: middle;
 }
-.right{
+.left{
     display: inline-block;
     margin-top: 0;
     position: relative;
@@ -69,31 +103,34 @@ ul{
 }
 .word{
     color: #ffffff;
-    font-size: 0.1rem;
+    font-size: 0.13rem;
     position: absolute;
-    left: 0.77rem;
-    top: 0.17rem;
+    left: 1rem;
+    top: 0.09rem;
+}
+.title{
+    margin-bottom: 0.05rem;
+}
+.tag{
+    margin-bottom: 0.08rem;
 }
 .username{
-    font-weight: bold;
-    margin-bottom: 0.07rem;
-}
-.detail{
     font-size: 0.09rem;
 }
-.roundImg{
-    width: 0.45rem;
-    height: 0.45rem;
-    border-radius: 0.45rem;
-    left: 0.159rem;
-    position: absolute;
-    top: 0.1621rem;
+.heart{
+    width: 0.1665rem;
+    height: 0.15rem;
+    background-image: url("~images/social/heart.png");
+    background-size: 100% 100%;
 }
-.squareImg{
+.roundImg{
+    width: 0.7rem;
+    height: 0.7rem;
+    border-radius: 0.7rem;
+    left: 0.1rem;
     position: absolute;
-    right: 0.0753rem;
-    top: 0.1255rem;
-    width: 0.6026rem;
-    height: 0.6026rem;
+    top: 0;
+    bottom: 0;
+    margin: auto;
 }
 </style>

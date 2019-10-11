@@ -53,8 +53,16 @@ export default {
     padding-left: .18rem
     padding-right: .18rem
     background: #ded9d3
+    padding-bottom:0.65rem
+    padding-top:.67rem
+    position:relative
+    z-index:0
+    overflow:auto
   .item
-    margin-bottom: .4rem
+    margin-bottom: .2rem
+    // padding-top:.2rem
+    border-radius:7px !important
+    // border: 1px solid red
     .item-top
       background-size: 100% 100%
       background-repeat: no-repeat

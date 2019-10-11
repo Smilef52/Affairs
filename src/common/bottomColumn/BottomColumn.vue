@@ -1,14 +1,18 @@
 <template>
   <div>
     <div id="bottom-column">
-      <div id="home" class="column-item column-items">
-        <img src="~images/common/主页(点击前).png" alt class="column-logo" />
-        <p class="column-text">主页</p>
-      </div>
-      <div id="interact" class="column-item column-items">
-        <img src="~images/common/互动(点击前).png" alt class="column-logo" />
-        <p class="column-text">互动</p>
-      </div>
+      <router-link to="/">
+        <div id="home" class="column-item column-items">
+          <img src="~images/common/主页(点击前).png" alt class="column-logo" />
+          <p class="column-text">主页</p>
+        </div>
+      </router-link>
+      <router-link to="/social">
+        <div id="social" class="column-item column-items">
+          <img src="~images/common/互动(点击前).png" alt class="column-logo" />
+          <p class="column-text">互动</p>
+        </div>
+      </router-link>
       <div id="new-card" class="column-circle-item column-items">
         <div class="circle-big">
           <div class="circle-small"></div>
@@ -46,6 +50,7 @@ export default {
   background: #FFFFFF;
   position: fixed;
   bottom: 0;
+  z-index: 99
 }
 .column-items {
   display: flex;
