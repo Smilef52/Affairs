@@ -7,6 +7,7 @@ import UserMyAffairs from '@/pages/user/myAffairs/myAffairs'
 import UserMyGroup from '@/pages/user/myGroup/myGroup'
 import UserMyDrafts from '@/pages/user/myDrafts/myDrafts'
 import UserMyHistory from '@/pages/user/myHistory/myHistory'
+import Person from '@/pages/person/Person'
 
 Vue.use(Router)
 
@@ -40,6 +41,10 @@ export default new Router({
       path: '/message',
       name: 'Message',
       component: Message
+    }, {
+      path: '/person',
+      name: 'Person',
+      component: Person
     }
   ]
 })
