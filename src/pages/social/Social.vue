@@ -28,7 +28,6 @@ export default {
     height: 6.02rem;
     background-image: url("~images/social/bgImg.png");
     background-size: 100% 100%;
-    /* display: flex; */
 }
 .fixedHeight{
     top: 0.67rem;
