@@ -3,8 +3,8 @@
     <div class="bgImg"></div>
     <group-header></group-header>
     <bottom-column></bottom-column>
-    <group-detail-edit v-show="showEditCard"></group-detail-edit>
-    <group-detail-info></group-detail-info>
+    <group-detail-edit v-show="showEditCard" @cancel="handleEditCancel" @creat="handleEditCreat"></group-detail-edit>
+    <group-detail-info @show="handleEditShow"></group-detail-info>
   </div>
 </template>
 
@@ -28,7 +28,17 @@ export default {
       showEditCard: false
     };
   },
-  methods: {}
+  methods: {
+    handleEditShow() {
+      this.showEditCard = true;
+    },
+    handleEditCancel() {
+      this.showEditCard = false;
+    },
+    handleEditCreat() {
+      this.showEditCard = false;
+    }
+  }
 };
 </script>
 
