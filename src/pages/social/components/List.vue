@@ -36,7 +36,7 @@ export default {
                 username: '格子琨',
                 roundImg: require('images/social/dove.png'),
                 squareImg: require('images/social/man.png')
-            }, ]
+            }]
         }
     }
 }
@@ -45,17 +45,13 @@ export default {
 <style scoped>
 ul{
     width: 3.05rem;
-    top: 1.07rem;
+    top: 0.4rem;
     right: 0;
     left: 0;
     margin-left: auto;
     margin-right: auto;
     position: relative;
 }
-/* .side{
-    background-image: url("~images/social/sidebar.png");
-    background-size: 100% 100%;
-} */
 .time{
     font-size: 0.15rem;
     color: #ffffff;

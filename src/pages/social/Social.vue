@@ -1,7 +1,9 @@
 <template>
     <div class="social">
         <social-header></social-header>
-        <social-list></social-list>
+        <div>
+            <social-list class="fixedHeight"></social-list>
+        </div>
         <bottom-column></bottom-column>
     </div>
 </template>
@@ -26,5 +28,12 @@ export default {
     height: 6.02rem;
     background-image: url("~images/social/bgImg.png");
     background-size: 100% 100%;
+}
+.fixedHeight{
+    top: 0.67rem;
+    height: 5.35rem;
+    width: 100%;
+    position: fixed;
+    overflow: auto;
 }
 </style>

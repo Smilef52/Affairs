@@ -1,6 +1,6 @@
 <template>
     <div class="social-header">
-        待办
+        社交
     </div>
 </template>
 
