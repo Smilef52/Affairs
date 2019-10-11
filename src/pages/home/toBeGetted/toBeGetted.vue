@@ -2,17 +2,20 @@
   <div class="unGetted">
     <get-header></get-header>
     <get-content></get-content>
+    <get-comment></get-comment>
   </div>
 </template>
 
 <script>
 import GetHeader from './components/Header'
 import GetContent from './components/Content'
+import GetComment from './components/Comment'
 export default {
   name:"unGetted",
   components:{
     GetHeader,
-    GetContent
+    GetContent,
+    GetComment
   }
 }
 </script>
