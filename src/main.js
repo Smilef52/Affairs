@@ -4,7 +4,7 @@ import Vue from 'vue'
 import './assets/styles/reset.css'
 import './assets/styles/border.css'
 import './rem.js'
-import Axios from 'axios'
+// import Axios from 'axios'
 // 以上三个都是实现准备好的样式和自适应准备
 
 
@@ -18,9 +18,9 @@ import store from './store'
 Vue.use(Vuex)
 
 //将axios挂载到原型链,这样之后就不用引入以及路径写入localhost:3000了
-Axios.defaults.baseURL = "http://localhost:3000";
-Axios.defaults.withCredentials = true;
-Vue.prototype.$axios = Axios
+// Axios.defaults.baseURL = "http://localhost:3000";
+// Axios.defaults.withCredentials = true;
+// Vue.prototype.$axios = Axios
 
 Vue.config.productionTip = false
 
