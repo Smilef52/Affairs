@@ -11,8 +11,9 @@
           <div class="content">  {{item.content}} </div>
         </div>
       </router-link>
+
        
-        <div class="item-detail">
+         <div class="item-detail">
           <div class="headImg" :style="'background-image: url('+item.headImg+')'"></div>
           <div class="ID">{{item.id}}</div>
           <div class="like"></div>
@@ -43,6 +44,14 @@ export default {
           headImg:require("../../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
           bgImg:require("../../../../assets/images/home/7d80ff064d6a0c2b575145c013083287051f736c81712-PMDkt5_fw658@2x.png"),
           id:"hahaha"
+        },
+        {
+          tag:"生活",
+          date:"7月15日 17:35",
+          content:"买奶茶买奶茶买奶茶",
+          headImg:require("../../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
+          bgImg:require("../../../../assets/images/home/7d80ff064d6a0c2b575145c013083287051f736c81712-PMDkt5_fw658@2x.png"),
+          id:"hahaha"
         }
       ]
     }
@@ -52,24 +61,23 @@ export default {
 
 <style lang="stylus" scoped>
   .get
-    padding-left: .18rem
-    padding-right: .18rem
-    padding-bottom:0.65rem
-    padding-top:.67rem
-    position:relative
-    z-index:0
-    overflow:auto
-    background:url(../../../../assets/images/home/533467916737652679@2x.png)
+    background:url(../../../../assets/images/home/533467916737652679@2x.jpg)
     background-repeat: no-repeat
     background-attachment:fixed
     background-size:100% 100%
+    position:relative
+    width:100%
+    z-index:0
+    overflow:auto
+    min-height:5rem
+    padding-bottom:1.3rem
   .item
-    margin-top: .2rem
+    margin:.2rem .18rem 0 .18rem
     border-radius:7px !important
     .item-top
       background-size: 100% 100%
       background-repeat: no-repeat
-      height: 1.8rem
+      height: 1.6rem
       font-size: .16rem
       font-weight: 100
       font-family:"Youyuan"

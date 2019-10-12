@@ -95,11 +95,12 @@ export default {
   width:150px
 .item-right 
   width:20%
-  float: right
-  // margin-right:.01rem
+  float: left
+  margin-left:.2rem
   // position:absolute
 .item-left 
   float:left
+  width:70%
   // position:relative
 .headImg
   background-size:100% 100%

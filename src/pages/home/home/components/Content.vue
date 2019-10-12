@@ -67,4 +67,7 @@ export default {
     touch-action: none
   .swiper-slide
     touch-action: none
+  .swiper-box
+    // padding-bottom:.65rem
+    padding-top:.67rem
 </style>
