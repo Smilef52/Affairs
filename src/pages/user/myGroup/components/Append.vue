@@ -1,6 +1,7 @@
 <template>
   <div class="append-cover">
-    <div class="append">
+    <!-- <div class="append"> -->
+    <form id= "append" action= "http://localhost:3000/group/new" method= "post" enctype ="multipart/form-data">    
       <div class="append-input">
         <div class="append-name">新建小组</div>
         <div class="append-input-imfo-box">
@@ -33,7 +34,8 @@
         <div class="append-button-creat" @click="handleCreatClick">创建</div>
         <div class="append-button-cancel" @click="handleCancelClick">取消</div>
       </div>
-    </div>
+    </form>
+    <!-- </div> -->
   </div>
 </template>
 
@@ -60,6 +62,15 @@ export default {
   },methods: {
     handleCancelClick() {
       this.$emit("cancel");
+      this.$axios.post('/group/new').then((res)=>{
+          console.log(res.data)
+          if(res.data) {
+            this.$router.push({path: '/'})
+          }
+        }).catch(err=>{
+          console.log(err)
+        });
+
     },
     handleCreatClick() {
       this.$emit("creat");
