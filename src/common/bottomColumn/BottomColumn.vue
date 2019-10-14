@@ -50,7 +50,7 @@ export default {
   background: #FFFFFF;
   position: fixed;
   bottom: 0;
-  z-index:1
+  z-index: 99
 }
 .column-items {
   display: flex;

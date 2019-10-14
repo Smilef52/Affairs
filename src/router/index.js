@@ -1,6 +1,7 @@
 import Vue from 'vue'
 import Router from 'vue-router'
-import Home from '@/pages/home/Home'
+import Home from '@/pages/home/home/Home'
+import UnGetted from '@/pages/home/toBeGetted/toBeGetted'
 import Social from '@/pages/social/Social'
 import Message from '@/pages/message/Message'
 import UserHome from '@/pages/user/home/Home'
@@ -50,6 +51,10 @@ export default new Router({
       path: '/message',
       name: 'Message',
       component: Message
+    },{
+      path:'/ungetted',
+      name:'unGetted',
+      component:UnGetted
     }
   ]
 })

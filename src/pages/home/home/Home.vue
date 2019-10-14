@@ -50,6 +50,27 @@ export default {
             // this.$store.commit('savaSwiperIndex',index)
         }
     }
+    
+//   methods: {
+//     // 点击导航菜单通过emit传给父亲然后父亲再传给子组件swiper组件
+//     clickIndex (index) {
+//     //   console.log('导航传的下标', index)
+//       this.slideIndex = index
+//       this.$store.commit('saveNavIndex', index)
+//     },
+//     // swiper滑动后下标通过emit传给父亲。父亲再传给子组件nav
+//     slideSendNav (index) {
+//     //   console.log('swiper传的下标', index)
+//       this.swiperToNav = index
+//       this.$store.commit('saveSwiperIndex', index)
+//     }
+//   },
+//   mounted () {
+//     this.swiperToNav = this.$store.state.navInde
+//     this.slideIndex = this.$store.state.swpierIndex
+//     // console.log(this.$store.state.navInde)
+//     // console.log(this.$store.state.swpierIndex)
+//   }
 }
 </script>
 

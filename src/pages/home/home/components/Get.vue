@@ -3,13 +3,17 @@
       <div class="item" 
            v-for="(item,index) of news" :key="index"
       >
-        <div class="item-top" :style="'background-image: url('+item.bgImg+')'">
+      <router-link to="/ungetted">
+         <div class="item-top" :style="'background-image: url('+item.bgImg+')'">
           <div class="bgFilter"></div>
           <div class="tag">{{item.tag}}</div>
           <div class="time">{{item.date}}</div>
           <div class="content">  {{item.content}} </div>
         </div>
-        <div class="item-detail">
+      </router-link>
+
+       
+         <div class="item-detail">
           <div class="headImg" :style="'background-image: url('+item.headImg+')'"></div>
           <div class="ID">{{item.id}}</div>
           <div class="like"></div>
@@ -29,16 +33,24 @@ export default {
           tag:"生活",
           date:"7月15日 17:35",
           content:"买奶茶买奶茶买奶茶",
-          headImg:require("../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
-          bgImg:require("../../../assets/images/home/7a6b9e819cc974483b8c52d2aee9469f9afa8989246aa-wNHZTb_fw658@2x.png"),
+          headImg:require("../../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
+          bgImg:require("../../../../assets/images/home/7a6b9e819cc974483b8c52d2aee9469f9afa8989246aa-wNHZTb_fw658@2x.png"),
           id:"hahaha"
         },
         {
           tag:"生活",
           date:"7月15日 17:35",
           content:"买奶茶买奶茶买奶茶",
-          headImg:require("../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
-          bgImg:require("../../../assets/images/home/7d80ff064d6a0c2b575145c013083287051f736c81712-PMDkt5_fw658@2x.png"),
+          headImg:require("../../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
+          bgImg:require("../../../../assets/images/home/7d80ff064d6a0c2b575145c013083287051f736c81712-PMDkt5_fw658@2x.png"),
+          id:"hahaha"
+        },
+        {
+          tag:"生活",
+          date:"7月15日 17:35",
+          content:"买奶茶买奶茶买奶茶",
+          headImg:require("../../../../assets/images/home/8d7568375c75ee4a1f3e4dbafbfa5f5c250d84b611415-fiEhnA_fw658@2x.png"),
+          bgImg:require("../../../../assets/images/home/7d80ff064d6a0c2b575145c013083287051f736c81712-PMDkt5_fw658@2x.png"),
           id:"hahaha"
         }
       ]
@@ -49,29 +61,29 @@ export default {
 
 <style lang="stylus" scoped>
   .get
-    // height: 33.3%
-    padding-left: .18rem
-    padding-right: .18rem
-    background: #ded9d3
-    padding-bottom:0.65rem
-    padding-top:.67rem
+    background:url(../../../../assets/images/home/533467916737652679@2x.jpg)
+    background-repeat: no-repeat
+    background-attachment:fixed
+    background-size:100% 100%
     position:relative
+    width:100%
     z-index:0
     overflow:auto
+    min-height:5rem
+    padding-bottom:1.3rem
   .item
-    margin-bottom: .2rem
-    // padding-top:.2rem
+    margin:.2rem .18rem 0 .18rem
     border-radius:7px !important
-    // border: 1px solid red
     .item-top
       background-size: 100% 100%
       background-repeat: no-repeat
-      height: 1.8rem
+      height: 1.6rem
       font-size: .16rem
       font-weight: 100
       font-family:"Youyuan"
       position: relative
       padding-top:.20rem
+      border-radius:.07rem .07rem 0 0
       .bgFilter
         height: 100%
         width: 100%
@@ -80,17 +92,19 @@ export default {
         top:0
         left:0
       .tag
-        color: #fff
-        border: 1px solid white 
-        border-radius: 0.02rem
-        display: inline
-        padding:.02rem .04rem
+        color: #FFF16E
+        border: .01rem solid #FFF16E 
+        border-radius: 0.07rem
+        padding:.02rem .06rem
         position: absolute
         left: .20rem
+        font-size:.14rem
+        display: inline
       .time 
         color: #fff 
         position: absolute
         right: .20rem
+        font-size:.15rem
       .content
         width:2rem
         font-size: .20rem
@@ -108,6 +122,7 @@ export default {
         display: flex
         align-items: center
         height: .6rem
+        border-radius:0 0 .07rem .07rem
     .headImg
       width: .5rem
       height: .5rem
