@@ -33,6 +33,11 @@ export default {
         password: this.password
       }).then((res)=>{
           console.log(res.data)
+          if(res.data.message) {
+            this.$cookieUser = res.data.userInfo.username;
+            console.log(this.$cookieUser);
+            this.$router.push({path: '/'})
+          }
         }).catch(err=>{
           console.log(err)
         });
@@ -40,7 +45,9 @@ export default {
     judgeCookie () {
       this.$axios.get('/users/cookie').then((res)=>{
           console.log(res.data)
-          if(res.data) {
+          if(res.data._id) {
+            this.$cookieUser = res.data.username;
+            console.log(this.$cookieUser);
             this.$router.push({path: '/'})
           }
         }).catch(err=>{

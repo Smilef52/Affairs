@@ -10,6 +10,8 @@ import UserMyGroup from '@/pages/user/myGroup/myGroup'
 import UserMyGroupDetail from '@/pages/user/myGroupDetail/myGroupDetail'
 import UserMyDrafts from '@/pages/user/myDrafts/myDrafts'
 import UserMyHistory from '@/pages/user/myHistory/myHistory'
+import newCard from '@/pages/newCard/newCard'
+import Person from '@/pages/person/Person'
 
 Vue.use(Router)
 
@@ -55,6 +57,14 @@ export default new Router({
       path:'/ungetted',
       name:'unGetted',
       component:UnGetted
+    }, {
+      path: '/newcard',
+      name: 'newCard',
+      component: newCard
+    }, {
+      path: '/person',
+      name: 'Person',
+      component: Person
     }
   ]
 })

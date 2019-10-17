@@ -13,11 +13,14 @@
           <p class="column-text">互动</p>
         </div>
       </router-link>
-      <div id="new-card" class="column-circle-item column-items">
-        <div class="circle-big">
-          <div class="circle-small"></div>
+      <router-link to="/newcard">
+        <div id="new-card" class="column-circle-item column-items">
+          <div class="circle-big">
+            <div class="circle-small"></div>
+          </div>
         </div>
-      </div>
+      </router-link>
+      
       <router-link to="/message">
         <div id="message" class="column-item column-items">
           <img src="~images/common/消息(点击前).png" alt class="column-logo" />
